@@ -71,7 +71,7 @@ const Navbar: React.FC = () => {
             {user ? (
               <Link
                 to={ROUTES.ADMIN_DASHBOARD}
-                className="flex items-center space-x-2 btn-primary"
+                className="flex items-center space-x-2 px-5 py-2 rounded-full text-white bg-purple-600 hover:bg-purple-700 shadow-md transition-colors"
               >
                 <FaUser />
                 <span>Dashboard</span>
@@ -139,7 +139,7 @@ const Navbar: React.FC = () => {
               {user ? (
                 <Link
                   to={ROUTES.ADMIN_DASHBOARD}
-                  className="flex items-center justify-center space-x-2 btn-primary w-full"
+                  className="flex items-center justify-center space-x-2 w-full px-5 py-2 rounded-full text-white bg-purple-600 hover:bg-purple-700 shadow-md transition-colors"
                 >
                   <FaUser />
                   <span>Dashboard</span>
