@@ -1,0 +1,40 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Banners collection
+    match /banners/{document} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+    
+    // Categories collection
+    match /categories/{document} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+    
+    // Products collection
+    match /products/{document} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+    
+    // Inquiries collection
+    match /inquiries/{document} {
+      allow create: if true;
+      allow read, update, delete: if request.auth != null;
+    }
+    
+    // Settings collection
+    match /settings/{document} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+    
+    // Gallery collection
+    match /gallery/{document} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+  }
+}
